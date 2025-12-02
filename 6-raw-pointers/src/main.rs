@@ -41,10 +41,15 @@ fn main() {
 
         *y3 = false;
 
-        println!("{}", *y4);
+       // println!("{}", *y4);
     }
 
     println!("{}", x);
+
+    let mut s1 = "hello world".to_string();
+
+    let str2 = "hello Impact Analytics";
+   
 }
 
 // rust references
@@ -56,11 +61,14 @@ fn main() {
 // * mut i32; --> mutable
 
 // create fun --> take two integer references , give me the addition two values return a pointer
-
 /*
 
     fn add_refs(a:&i32,b:&i32)->&i32{
+    let mut r = 0;
 
+    r = *a + *b ;
+
+    return &r
     }
 
 */
