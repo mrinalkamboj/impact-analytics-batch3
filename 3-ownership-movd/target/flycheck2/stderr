@@ -1,1 +1,56 @@
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   0.037651025s  INFO prepare_target{force=false package_id=ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd) target="ownership_rules"}: cargo::core::compiler::fingerprint: fingerprint error for ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd)/Check { test: false }/TargetInner { name: "ownership_rules", doc: true, ..: with_path("/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd/src/main.rs", Edition2024) }
+   0.037704452s  INFO prepare_target{force=false package_id=ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd) target="ownership_rules"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd/target/debug/.fingerprint/ownership_rules-52a19b2f1f5462b4/bin-ownership_rules`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+  18: <unknown>
+   0.080767200s  INFO prepare_target{force=false package_id=ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd) target="ownership_rules"}: cargo::core::compiler::fingerprint: fingerprint error for ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd)/Check { test: true }/TargetInner { name: "ownership_rules", doc: true, ..: with_path("/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd/src/main.rs", Edition2024) }
+   0.080792454s  INFO prepare_target{force=false package_id=ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd) target="ownership_rules"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd/target/debug/.fingerprint/ownership_rules-4b579792cc969f5c/test-bin-ownership_rules`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: std::backtrace::Backtrace::capture
+   2: cargo_util::paths::read_bytes
+   3: cargo_util::paths::read
+   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   5: cargo::core::compiler::fingerprint::prepare_target
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+  18: <unknown>
+    Checking ownership_rules v0.1.0 (/Users/mrinalkamboj/Library/CloudStorage/OneDrive-ImpactBigDataAnalyticsPrivateLimited/Learn/Rust/impact-analytics-batch3/3-ownership-movd)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.42s
