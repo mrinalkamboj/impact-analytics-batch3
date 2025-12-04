@@ -1,9 +1,9 @@
 fn main() {
     let mut arr1: [i32; 9] = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
     let slice1: &[i32] = &arr1[0..4]; // borrowing // ptr and also len
     let slice2: &[i32] = &arr1[4..=8]; // &mut 
     let slice3: &[i32] = &arr1[4..]; // borrowing rules
-    let slice4 = &arr1[..];
 
     // &[i32]-> {ptr,len}
     //arr1[0]= 100;
@@ -14,7 +14,7 @@ fn main() {
         let r1 = get_double_sum(slice4);
     }
 
-    println!("{:?}", arr1);
+    //println!("{:?}", arr1);
 
     //     for i in slice1{
     //         println!("{}",i);
@@ -25,6 +25,24 @@ fn main() {
     //    let r1 = get_sum(slice3);
 
     // let str1: &str = "Helllo Wrold"; // ptr and len
+    let slice4 = &arr1[..];
+    for (i, v) in slice4.iter().enumerate() {
+        println!("index:{} value:{}", i, v);
+    }
+
+    let mut i=0;
+
+    for v in slice4{
+        println!("index:{} value:{}", i, v);
+        i+=1;
+    }
+
+    let str1 = "Hello World";
+   
+    for c in str1.chars(){
+
+    }
+
 }
 
 // &str --> string slice --> ptr and lengh
@@ -51,7 +69,7 @@ fn get_double_sum(arr: &mut [i32]) -> i32 {
     sum
 }
 
-// take an array 
+// take an array
 // fill the array with default value 0
 // let arr = [0;10];
 // take a rand libray and fill the array with random numbers
