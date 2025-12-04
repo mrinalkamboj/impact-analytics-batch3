@@ -3,9 +3,9 @@ fn main() {
     //let mut vec2= Vec::new();
 
     //    vec2.push(100);
-    // //    //Vec::push(&mut vec2, 100);
-    // //    vec2.push(200);
-    // //    vec2.push(200);
+    //    Vec::push(&mut vec2, 100);
+    //    vec2.push(200);
+    //    vec2.push(200);
 
     let mut sum = 0;
 
@@ -37,23 +37,22 @@ fn main() {
     //     println!("{}",arr[i])
     // }
 
-    let mut str1 = "Hello World".to_string();
-
-    let mut ptr = str1.as_mut_ptr();
-    
-    let l = str1.len();
-    let c =str1.capacity();
-    std::mem::forget(str1); // says dont drop it here
-
-        unsafe{
-            let mut s1 = String::from_raw_parts(ptr, l,c);
-            println!("{}",s1);
-        }
    
+   
+
+   let s = get_sum(&vec1);
+   println!("Sum:{}",s);
 //    let str1="Hello World";
 //    let ptr: *mut u8 = str1.as_mut_ptr() as *mut u8;
 
 }
 
 
-//9618558500
+fn get_sum(arr: &[i32]) -> i32 {
+    // functions or methods are written for slices, not for arrays
+    let mut sum = 0;
+    for i in arr {
+        sum += *i;
+    }
+    sum
+}
