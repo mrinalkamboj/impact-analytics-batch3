@@ -1,8 +1,6 @@
 fn main() {
-   
- 
+  
  let mut r1 = Rect::new(12.234,43.34);
-
  let a1 =r1.area();
  let p1 =r1.perimeter();
 
@@ -15,7 +13,6 @@ let a1 = r1.area();
 
 // let mut v = vec![10,20];
 let mut a = 10;
-
 
 }
 
@@ -39,10 +36,10 @@ impl Rect{
         return self.a
     }
 
-     fn perimeter(&self)->f64{
-        // self.p= (2.0 * (self.l+self.b)) as f64;
-        // return self.p;
-        (2.0 * (self.l+self.b)) as f64;
+     fn perimeter(&mut self)->f64{
+        self.p= (2.0 * (self.l+self.b)) as f64;
+        return self.p;
+       // (2.0 * (self.l+self.b)) as f64;
     }
 }
 
